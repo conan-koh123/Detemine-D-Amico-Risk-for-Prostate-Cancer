@@ -77,8 +77,8 @@ def risk_classify():
 #function to classify favorable or infavorable intermediate risk using risk count
 def risk_count(count):
     intermediate_risk = ""
-    if int(count) == 0:
-        intermediate_risk = "Not Applicable"
+    if int(count) == -1:
+        intermediate_risk = "N.A."
     elif int(count) < 2:
         intermediate_risk = "Favorable"
     elif int(count) >= 2:
@@ -93,17 +93,17 @@ def intermediate_risk(risk):
     if risk == "Intermediate":
         if float(core_involvement.get()) > 50:
             count += 1
-        elif Gleason_score.get() in ["4+4", "4+3", "4+5"]:
+        if Gleason_score.get() in ["4+4", "4+3", "4+5"]:
             count += 1
-        elif ct.get() in ["T2", "T2a", "T2b", "T2c"]:
+        if ct.get() in ["T2", "T2a", "T2b", "T2c"]:
             count += 0.5
-        elif Gleason_score.get() in ["3+4", "4+3"]:
+        if Gleason_score.get() in ["3+4", "4+3"]:
             count += 0.5
-        elif float(psa.get()) >= 10 and float(psa.get()) <= 20:
+        if float(psa.get()) >= 10 and float(psa.get()) <= 20:
             count += 0.5
     else:
-        count = 0
-    return risk_count(count)
+        count = -1
+    return (risk_count(count), count)
 
 
 #Function for output
@@ -114,7 +114,8 @@ def output_risk():
     output = "\n" + "PSA Level:" + psa.get()  + "\n" + \
              "Gleason Score:" + Gleason_score.get() + "\n" + \
              "cT Staging:" + ct.get() + "\n" + "Risk Classification: " + risk + \
-             "\n" + "Intermediate Risk: " + intermed_risk
+             "\n" + "Core Involvement: " + core_involvement.get() + "%" +  \
+             "\n" + "Intermed Risk: " + intermed_risk
     output_entry.insert(END, output)
 
 
