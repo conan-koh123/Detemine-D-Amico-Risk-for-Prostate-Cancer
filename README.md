@@ -1,6 +1,5 @@
-# Detemine-D-Amico-Risk-for-Prostate-Cancer
+# Detemine Risk Classification for Prostate Cancer
 
-This programme determine the D' Amico Risk Classification of prostate cancer based on cT Staging, Gleason Score and PSA level at diagnosis
-of Prostate Cancer patients. It is written in Python 2.7.
+This programme determine the risk classification (e.g. D Amico's Risk, NCCN Risk) of prostate cancer based on cT Staging, Gleason Score and PSA level at diagnosis of Prostate Cancer patients. It is written in Python 2.7.
 
-For "Determine D amico risk for prostate cancer.py", it determine the classification based on cT Staging, Gleason Score and PSA level at diagnosis. For "Determine D amico risk for prostate cancer_intermediate.py", it includes the stratification of intermediate risk into favorable and unfavorable intermediate risk. 
+For "Determine D amico risk for prostate cancer.py", it determines the classification based on cT Staging, Gleason Score and PSA level at diagnosis using D Amico's risk classification. For "Prostate Cancer Clinical Trial.py", it classifies risk based on NCCN risk classification, with the inclusion of further stratifying intermediate risk into favorable and unfavorable intermediate risk. In addition, it allows that calculation of duration based on start date and end date. This program is suitable in assisting the screening process of potential participants for clinical trials. 
