@@ -7,7 +7,6 @@ For "Determine D amico risk for prostate cancer.py", it determines the risk clas
 <br>
 <img height = "300", src = "https://github.com/conan-koh123/Detemine-Risk-Classification-for-Prostate-Cancer/blob/master/prostate%20cancer%20clinical%20trial%20program%20NCCN%20risk%20classification.png"/>
 </br>
-
 <br>
 <img height = "300", src = "https://github.com/conan-koh123/Detemine-Risk-Classification-for-Prostate-Cancer/blob/master/prostate%20cancer%20clinical%20trial%20date%20calculation.png"/>
 </br>
